@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aTJ-oE-4Zl">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Amazing Toasts-->
+        <scene sceneID="aDk-bQ-GnE">
+            <objects>
+                <tableViewController id="ppk-XB-VaV" customClass="CustomTableViewController" customModule="CustomTableViewCell" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="WEB-D5-l5o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCell" rowHeight="201" id="YYL-9Q-32d" customClass="ToastTableViewCell" customModule="CustomTableViewCell" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="201"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YYL-9Q-32d" id="vIj-1M-1yM">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="201"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="avocadotoast" translatesAutoresizingMaskIntoConstraints="NO" id="fKM-T4-iea">
+                                            <rect key="frame" x="20" y="0.0" width="365" height="178"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvL-If-EJ8">
+                                            <rect key="frame" x="20" y="179" width="268" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="ToastImage" destination="fKM-T4-iea" id="gp1-86-EHP"/>
+                                    <outlet property="ToastName" destination="bvL-If-EJ8" id="2EG-MD-bxV"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ppk-XB-VaV" id="8Zg-l9-mGd"/>
+                            <outlet property="delegate" destination="ppk-XB-VaV" id="RzU-h8-X2O"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Amazing Toasts" id="cLf-Ga-wWn"/>
+                    <connections>
+                        <segue destination="au0-Mj-Q3M" kind="show" id="sUp-uq-qmM"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KA4-br-HDo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="897.10144927536237" y="-103.125"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="PxU-iU-e2q">
+            <objects>
+                <viewController restorationIdentifier="DetailVC" storyboardIdentifier="DetailVC" id="au0-Mj-Q3M" customClass="DetailViewController" customModule="CustomTableViewCell" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I8k-fL-G4P">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="avocadotoast" translatesAutoresizingMaskIntoConstraints="NO" id="0P8-Q5-Ead">
+                                <rect key="frame" x="20" y="173" width="374" height="381"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAy-ad-ovX">
+                                <rect key="frame" x="20" y="562" width="374" height="322"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">"Ingredients:\n •6 thick slices bread\n •2 eggs\n •2/3 cup milk\n •1/4 teaspoon ground cinnamon(optional)\n •1 teaspoon vanilla extract (optional)""Ingredients:\n •6 thick slices bread\n •2 eggs\n •2/3 cup milk\n •1/4 teaspoon ground cinnamon(optional)\n •1 teaspoon vanilla extract (optional)""Ingredients:\n •6 thick slices bread\n •2 eggs\n •2/3 cup milk\n •1/4 teaspoon ground cinnamon(optional)\n •1 teaspoon vanilla extract (optional)"</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="HIz-kG-odk"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OW5-bt-9Sh"/>
+                    <connections>
+                        <outlet property="navigationBar" destination="OW5-bt-9Sh" id="h2D-wN-Di5"/>
+                        <outlet property="toastDescription" destination="wAy-ad-ovX" id="rfC-IA-GKE"/>
+                        <outlet property="toastImage" destination="0P8-Q5-Ead" id="bxY-OY-do3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wbq-Bc-amR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1773.913043478261" y="-103.125"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="90F-j8-JQo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aTJ-oE-4Zl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="NfQ-Fo-SbO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ppk-XB-VaV" kind="relationship" relationship="rootViewController" id="2Y1-ea-q5c"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="990-Rz-KCZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4" y="-103"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="avocadotoast" width="1280" height="1280"/>
+    </resources>
+</document>
